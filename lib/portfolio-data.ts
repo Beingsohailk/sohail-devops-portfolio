@@ -18,7 +18,6 @@ export const profile = {
   email: "sohailcloudy@gmail.com",
   linkedIn: "https://www.linkedin.com/in/sohail-bagali",
   github: "https://github.com/Beingsohailk",
-  /** Public path to PDF — place your file at `public/resume.pdf` (or update this path). */
   resumePdfPath: "/resume.pdf",
   resumeDownloadName: "Sohail-Bagali-Resume.pdf",
   profileImagePath: "/profile.png",
@@ -36,8 +35,8 @@ export const navLinks = [
 ] as const
 
 export const aboutParagraphs = [
-  "I design and operate reliable cloud platforms with a focus on automation, observability, and secure delivery pipelines. My work spans AWS foundations, container orchestration, and GitOps-style deployments that teams can trust in production.",
-  "I collaborate closely with engineering stakeholders to shorten feedback loops, standardize infrastructure as code, and keep systems measurable—from commit to production.",
+  "I design and operate reliable cloud platforms with a focus on automation, observability, and secure delivery pipelines.",
+  "I collaborate closely with engineering stakeholders to shorten feedback loops and standardize infrastructure as code.",
 ] as const
 
 export const skillGroups: {
@@ -63,12 +62,7 @@ export const skillGroups: {
   {
     title: "CI/CD & GitOps",
     icon: Workflow,
-    items: [
-      "Jenkins",
-      "GitHub Actions",
-      "GitLab CI/CD",
-      "ArgoCD",
-    ],
+    items: ["Jenkins", "GitHub Actions", "GitLab CI/CD", "ArgoCD"],
   },
   {
     title: "Observability",
@@ -76,59 +70,19 @@ export const skillGroups: {
     items: ["Prometheus", "Grafana", "Dynatrace"],
   },
   {
-    title: "Languages & tooling",
+    title: "Languages & Tooling",
     icon: GitBranch,
     items: ["Python", "Shell", "Git", "GitHub"],
   },
-] as const
+]
 
-export const projects: {
-  title: string
-  description: string
-  highlights: readonly string[]
-  /** Shown as screenshot placeholder when no image yet */
-  screenshotLabel?: string
-  href?: string
-}[] = [
-  {
-    title: "EKS platform & GitOps delivery",
-    description:
-      "Terraform-defined networking and workloads on Amazon EKS with ArgoCD for progressive rollouts and environment parity.",
-    highlights: ["EKS", "ArgoCD", "Terraform", "IAM least-privilege"],
-    screenshotLabel: "EKS · GitOps",
-    href: profile.github,
-  },
-  {
-    title: "CI/CD modernization",
-    description:
-      "Unified build and deploy pipelines across services with automated quality gates, artifact promotion, and rollback-safe releases.",
-    highlights: ["GitHub Actions", "GitLab CI", "Jenkins", "Containers"],
-    screenshotLabel: "Pipelines",
-    href: profile.github,
-  },
-  {
-    title: "Observability & SRE metrics",
-    description:
-      "Dashboards and alerting wired into Prometheus and Grafana with Dynatrace for deep-dive analysis and uptime reporting.",
-    highlights: ["Prometheus", "Grafana", "Dynatrace", "SLO mindset"],
-    screenshotLabel: "Dashboards",
-    href: profile.github,
-  },
-] as const
-
-export const experience: {
-  company: string
-  role: string
-  period: string
-  summary: string
-  icon: LucideIcon
-}[] = [
+export const experience = [
   {
     company: "T-Machine Software Solutions",
     role: "DevOps Engineer",
     period: "Jan 2023 – May 2025",
     summary:
-      "Owned CI/CD workflows, cloud automation, and production operations—improving release cadence and platform stability.",
+      "Owned CI/CD workflows, cloud automation, and production operations.",
     icon: Cloud,
   },
   {
@@ -136,38 +90,86 @@ export const experience: {
     role: "DevOps Intern",
     period: "Jan 2022 – May 2022",
     summary:
-      "Supported pipeline automation, documentation, and hands-on exposure to enterprise delivery practices and tooling.",
+      "Supported pipeline automation and enterprise delivery practices.",
     icon: BarChart3,
   },
-] as const
+]
 
-export const certifications: {
-  name: string
-  status?: string
-}[] = [
-  { name: "AWS Cloud Practitioner", status: "In progress" },
+export const certifications = [
+  { name: "AWS Cloud Practitioner", status: "In Progress" },
   { name: "Docker Essentials" },
   { name: "GitOps with ArgoCD" },
-] as const
+]
 
-export const achievements: {
-  title: string
-  detail: string
-  icon: LucideIcon
-}[] = [
+export const achievements = [
   {
-    title: "Faster deployments",
+    title: "Faster Deployments",
     detail: "Reduced deployment time by 40%",
     icon: Workflow,
   },
   {
-    title: "High availability",
+    title: "High Availability",
     detail: "Maintained >99% uptime",
     icon: Shield,
   },
   {
-    title: "Release efficiency",
+    title: "Release Efficiency",
     detail: "Optimized release cycle efficiency",
     icon: Award,
   },
-] as const
+]
+
+export const projects = [
+  {
+    title: "Cloud-Native DevOps Pipeline on AWS EKS",
+    description:
+      "Built a cloud-native DevOps workflow using AWS EKS, Terraform, Docker, Kubernetes, and GitHub Actions CI/CD.",
+    image: "/projects/eks-cicd.jpg",
+    highlights: [
+      "AWS EKS",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+    ],
+    href: "https://github.com/Beingsohailk",
+  },
+
+  {
+    title: "Scalable & Secure Web Application on AWS",
+    description:
+      "Designed and deployed a scalable Nginx-based web application using ALB, Auto Scaling, NAT Gateway, and AWS WAF.",
+    image: "/projects/aws-autoscaling.jpeg",
+    highlights: [
+      "VPC",
+      "EC2",
+      "ALB",
+      "Auto Scaling",
+      "AWS WAF",
+    ],
+    href: "https://github.com/Beingsohailk",
+  },
+
+  {
+    title: "Microservices Monitoring with OpenTelemetry",
+    description:
+      "Built distributed monitoring using OpenTelemetry and Docker Compose.",
+    image: "/projects/opentelemetry.jpeg",
+    highlights: [
+      "Docker Compose",
+      "OpenTelemetry",
+      "Monitoring",
+      "Tracing",
+    ],
+    href: "https://github.com/Beingsohailk",
+  },
+
+  {
+    title: "Automated Code Quality Analysis with SonarQube",
+    description:
+      "Implemented automated code quality analysis using SonarQube.",
+    image: "/projects/sonarqube.jpeg",
+    highlights: ["SonarQube", "Docker", "Maven", "Ubuntu"],
+    href: "https://github.com/Beingsohailk",
+  },
+]

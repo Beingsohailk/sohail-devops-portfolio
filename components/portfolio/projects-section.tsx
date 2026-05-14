@@ -13,8 +13,8 @@ export function ProjectsSection() {
         <FadeIn>
           <SectionHeading
             eyebrow="helm list"
-            title="Selected projects"
-            description="Representative themes from my DevOps and cloud work—platform design, pipelines, and observability."
+            title="Selected Projects"
+            description="Hands-on DevOps, Cloud, Kubernetes, CI/CD, and Observability projects."
           />
         </FadeIn>
 
@@ -25,7 +25,7 @@ export function ProjectsSection() {
               title={project.title}
               description={project.description}
               highlights={project.highlights}
-              screenshotLabel={project.screenshotLabel}
+              image={project.image}
               href={project.href}
               className={
                 index === projects.length - 1 && projects.length % 2 === 1
