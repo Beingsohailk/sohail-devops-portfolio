@@ -19,7 +19,7 @@ export const profile = {
   linkedIn: "https://www.linkedin.com/in/sohail-bagali",
   github: "https://github.com/Beingsohailk",
   /** Public path to PDF — place your file at `public/resume.pdf` (or update this path). */
-  resumePdfPath: "/profile.png",
+  resumePdfPath: "/resume.pdf",
   resumeDownloadName: "Sohail-Bagali-Resume.pdf",
   profileImagePath: "/profile.png",
 } as const
